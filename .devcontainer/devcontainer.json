@@ -1,0 +1,50 @@
+{
+    "name": "rfastutil",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/rust:1": {
+            "version": "1.85.0"
+        },
+	"ghcr.io/devcontainers/features/java:1": {
+	    "version": "8",
+	    "installGradle": "true",
+	    "installMaven": "false"
+	},
+        "ghcr.io/devcontainers/features/node:1": {},
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+	    "dockerDashComposeVersion": "v2.33.1"
+	},
+        "ghcr.io/duduribeiro/devcontainer-features/neovim:1": {
+	    "version": "nightly"
+	}
+    },
+    "mounts": [
+        "source=${localWorkspaceFolderBasename}-target,target=${containerWorkspaceFolder}/target,type=volume",
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/vscode/.ssh,readonly,type=bind"
+    ],
+    "containerEnv": {
+        "WORKSPACE_FOLDER": "${containerWorkspaceFolder}"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "EditorConfig.EditorConfig",
+                "rust-lang.rust-analyzer",
+                "tamasfe.even-better-toml",
+                "vadimcn.vscode-lldb",
+                "ms-azuretools.vscode-docker",
+                "oderwat.indent-rainbow"
+            ],
+            "settings": {
+                // "editor.formatOnSave": true,
+                // "rust-analyzer.check.command": "clippy",
+                "rust-analyzer.check.extraArgs": [
+                    "--target-dir",
+                    "${containerWorkspaceFolder}/target"
+                ]
+            }
+        }
+    }
+}

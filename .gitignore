@@ -1,0 +1,51 @@
+/target
+
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Gradle files
+.gradle
+/build/
+
+# Local configuration file (IntelliJ IDEA)
+.idea/
+
+# Eclipse project files
+.classpath
+.project
+.settings/
+
+# NetBeans project files
+nbproject/
+
+# Temporary files created by developers
+*.swp
+*~
+\#*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IntelliJ IDEA
+*.iml
+/out/
+
+# Gradle build scan data
+.gradle-build-scan/
+
+# Local environment configuration
+.env
+*.properties
+
+# Cache directories
+/caches/
+
