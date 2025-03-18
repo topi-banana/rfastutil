@@ -21,7 +21,6 @@
 	}
     },
     "mounts": [
-        "source=${localWorkspaceFolderBasename}-target,target=${containerWorkspaceFolder}/target,type=volume",
         "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/vscode/.ssh,readonly,type=bind"
     ],
     "containerEnv": {

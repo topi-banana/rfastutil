@@ -24,6 +24,8 @@ java {
 
 test {
     useJUnitPlatform()
+
+    systemProperty 'java.library.path', '/workspaces/rfastutil/target/release'
 }
 
 publishing {
